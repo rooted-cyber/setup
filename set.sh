@@ -3,6 +3,7 @@ cd ~/setup
 }
 fix() {
 apt install --fix-broken
+
 }
 oste() {
 cd /
