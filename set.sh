@@ -1,62 +1,29 @@
 fol() {
 cd ~/setup
 }
-fix() {
-apt install --fix-broken
-
+msg() {
+echo -e "\033[1;92m"
+echo -e "$@" >&2
 }
-oste() {
-cd /
-if [ -e system ];then
-printf "\033[1;92m Found Termux\n"
+cpos() {
 fol
-dpkg -i a*term*deb
+dpkg -i *os*
+}
+teos()
+fol
 cp font* termux* ~/.termux
-#cp .zshrc ~
-else
-printf "\033[1;91m Not Found Termux, any os found\n"
-fol
-dpkg -i a*os.deb
-fi
+dpkg -i *termux*
 }
-chp() {
-cd $PREFIX/bin
-if [ -e $a ];then
-printf "\n\033[1;93m Already installed $a\n"
-else
-printf "\n\033[1;95m Installing $a\n"
-apt install $a -y || apt reinstall $a -y
-fi
-}
-chps() {
+fot() {
 cd /bin
-if [ -e $a ];then
-printf "\n\033[1;93m Already installed $a\n"
+if [ -e apt ];then
+msg os found !!!
+cpos
+echo
+echo
 else
-printf "\n\033[1;95m Installing $a\n"
-apt install $a -y || apt reinstall $a -y
+msg Termux found !!!
+echo
+teos
 fi
 }
-chtm() {
-cd /
-if [ -e system ];then
-printf "\033[1;92m Found Termux\n"
-chp
-else
-printf "\033[1;91m Not Found Termux, any os found\n"
-chps
-fi
-}
-sta() {
-fix
-apt update
-apt upgrade -y
-apt install --fix-broken -y
-}
-sta
-for a in wget python3 figlet toilet python-pip openssh;do
-chtm
-done
-oste
-sta
-fix
