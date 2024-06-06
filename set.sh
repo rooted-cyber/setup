@@ -5,7 +5,7 @@ msg() {
 echo -e "\033[1;92m"
 echo -e "$@" >&2
 }
-cpos() {
+cpts() {
 fol
 dpkg -i *os*
 }
@@ -18,7 +18,7 @@ fot() {
 cd /bin
 if [ -e apt ];then
 msg os found !!!
-cpos
+cpts
 echo
 echo
 else
