@@ -5,11 +5,11 @@ msg() {
 echo -e "\033[1;92m"
 echo -e "$@" >&2
 }
-cpts() {
+cpost() {
 fol
 dpkg -i *os*
 }
-teos()
+teos() {
 fol
 cp font* termux* ~/.termux
 dpkg -i *termux*
@@ -18,7 +18,7 @@ fot() {
 cd /bin
 if [ -e apt ];then
 msg os found !!!
-cpts
+cpost
 echo
 echo
 else
@@ -27,3 +27,4 @@ echo
 teos
 fi
 }
+fot
