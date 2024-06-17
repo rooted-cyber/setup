@@ -1,3 +1,7 @@
+dl() {
+cd ~
+wget -O https://gist.githubusercontent.com/rooted-cyber/05ca0b015cdbdb3ac87bb9cdaed3da75/
+}
 fol() {
 cd ~/setup
 }
@@ -19,12 +23,14 @@ cd /bin
 if [ -e apt ];then
 msg os found !!!
 cpost
+dl
 echo
 echo
 else
 msg Termux found !!!
 echo
 teos
+dl
 fi
 }
 fot
