@@ -11,7 +11,7 @@ echo -e "$@" >&2
 }
 cpost() {
 fol
-dpkg -i *os*
+dpkg -i *os* || sudo dpkg -i *os*
 }
 teos() {
 fol
