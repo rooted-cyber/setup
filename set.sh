@@ -16,7 +16,7 @@ dpkg -i *os* || sudo dpkg -i *os*
 teos() {
 fol
 cp font* termux* ~/.termux
-dpkg -i *termux*
+dpkg -i *termux*deb
 }
 fot() {
 cd /bin
