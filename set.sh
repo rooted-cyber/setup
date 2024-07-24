@@ -8,6 +8,7 @@ cp tu $PREFIX/bin
 chmod 777 $PREFIX/bin/tu
 }
 mtt() {
+cd /
 if [ -e setup ];then
 cd /set*
 cp con* tok* /m*t*t
