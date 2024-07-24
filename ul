@@ -1,0 +1,5 @@
+#!/bin/python3
+from bot.helper.telegram_helper.message_utils import sendMessage as d, deleteMessage, editMessage as e, sendFile as s
+await e(message,"processing..")
+cmd = message.text.split(maxsplit=1)
+await s(message,cmd)
