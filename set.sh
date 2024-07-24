@@ -12,8 +12,8 @@ cd /
 if [ -e setup ];then
 cd /set*
 cp con* tok* /m*t*t
-cp tu y* ran* /bin
-chmod 777 /bin/tu /bin/y* /bin/ran*
+cp tu y* ran* ul /bin
+chmod 777 /bin/tu /bin/y* /bin/ran* /bin/ul
 fi
 }
 dl() {
