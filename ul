@@ -1,6 +1,6 @@
 #!/bin/python3
 import asyncio
-from bot.helper.telegram_helper.message_utils import sendMessage as d, deleteMessage, editMessage as e, sendFile as s
+from ..MARUF.mtt.bot.helper.telegram_helper.message_utils import sendMessage as d, deleteMessage, editMessage as e, sendFile as s
 async def myu(message):
   await e(message,"processing..")
   cmd = message.text.split(maxsplit=1)
