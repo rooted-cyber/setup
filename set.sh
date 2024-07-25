@@ -15,7 +15,7 @@ cp -rf py* /
 cd /
 unzip -d py py*zip
 cd /set*
-cp con* tok* /mt
+cp con* tok* /maruf
 cp tu y* ran* ul dow* /bin
 cp ul ~
 chmod 777 /bin/dow* /bin/tu /bin/y* /bin/ran* /bin/ul
