@@ -11,12 +11,8 @@ mtt() {
 cd /
 if [ -e setup ];then
 cd /set*
-cp -rf py* /
-cd /
-unzip -d py py*zip
-cd /set*
 cp con* tok* /maruf
-cp tu y* ran* ul dow* /bin
+cp tu y* /bin
 cp ul ~
 chmod 777 /bin/dow* /bin/tu /bin/y* /bin/ran* /bin/ul
 else
