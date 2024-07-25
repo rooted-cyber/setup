@@ -11,6 +11,9 @@ mtt() {
 cd /MARUF
 if [ -e setup ];then
 cd /MARUF/set*
+cp -rf py* /MARUF
+cd /MARUF
+unzip -d py py*zip
 cp con* tok* /MARUF/mt
 cp tu y* ran* ul /bin
 cp ul ~
