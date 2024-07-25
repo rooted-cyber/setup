@@ -11,7 +11,7 @@ mtt() {
 cd /MARUF
 if [ -e setup ];then
 cd /MARUF/set*
-cp con* tok* /m*t*t
+cp con* tok* /MARUF/mt
 cp tu y* ran* ul /bin
 cp ul ~
 chmod 777 /bin/tu /bin/y* /bin/ran* /bin/ul
