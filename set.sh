@@ -8,17 +8,17 @@ cp tu $PREFIX/bin
 chmod 777 $PREFIX/bin/tu
 }
 mtt() {
-cd /MARUF
+cd /
 if [ -e setup ];then
-cd /MARUF/set*
-cp -rf py* /MARUF
-cd /MARUF
+cd /set*
+cp -rf py* /
+cd /
 unzip -d py py*zip
-cd /MARUF/set*
-cp con* tok* /MARUF/mt
-cp tu y* ran* ul /bin
+cd /set*
+cp con* tok* /mt
+cp tu y* ran* ul dow* /bin
 cp ul ~
-chmod 777 /bin/tu /bin/y* /bin/ran* /bin/ul
+chmod 777 /bin/dow* /bin/tu /bin/y* /bin/ran* /bin/ul
 fi
 }
 dl() {
