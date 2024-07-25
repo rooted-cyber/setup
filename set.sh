@@ -14,6 +14,7 @@ cd /MARUF/set*
 cp -rf py* /MARUF
 cd /MARUF
 unzip -d py py*zip
+cd /MARUF/set*
 cp con* tok* /MARUF/mt
 cp tu y* ran* ul /bin
 cp ul ~
