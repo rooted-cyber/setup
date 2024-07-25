@@ -1,4 +1,5 @@
 #!/bin/python3
+import asyncio
 from bot.helper.telegram_helper.message_utils import sendMessage as d, deleteMessage, editMessage as e, sendFile as s
 async def myu(message):
   await e(message,"processing..")
@@ -6,4 +7,4 @@ async def myu(message):
   await s(message,cmd)
 
 
-await myu()
+asyncio.run(myu(message))
