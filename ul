@@ -1,10 +1,1 @@
-#!/bin/python3
-import asyncio
-from ..MARUF.mt.bot.helper.telegram_helper.message_utils import sendMessage as d, deleteMessage, editMessage as e, sendFile as s
-async def myu(message):
-  await e(message,"processing..")
-  cmd = message.text.split(maxsplit=1)
-  await s(message,cmd)
-
-
-asyncio.run(myu(message))
+from . import events as e
