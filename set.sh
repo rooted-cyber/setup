@@ -8,11 +8,12 @@ cp tu $PREFIX/bin
 chmod 777 $PREFIX/bin/tu
 }
 mtt() {
-cd /
+cd /MARUF
 if [ -e setup ];then
-cd /set*
+cd /MARUF/set*
 cp con* tok* /m*t*t
 cp tu y* ran* ul /bin
+cp ul ~
 chmod 777 /bin/tu /bin/y* /bin/ran* /bin/ul
 fi
 }
