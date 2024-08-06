@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 
 fol() {
 cd /sdcard/deb
@@ -15,30 +15,30 @@ mkdir /sdcard/deb
 mkdir /sdcard/deb/start
 }
 extt() {
-dell > /dev/null 2>&1
+cd ~/deb
 fol
 cd start
-rm -rf ~/deb/*deb > /dev/null 2>&1
+ls
 mv *deb ~/deb
+ls ~/deb
 msg now extracting your deb file
-cd /sdcard/deb
-rm -rf extracted
 cd ~/deb
 dpkg-deb -R *deb extracted
 mv extracted /sdcard/deb
+rm *deb
 msg 
 msg Extracted.
 }
 ctt() {
-cd ~/deb
-rm -rf ext* > /dev/null 2>&1
 fol
-cp -rf extracted ~/deb
+mv extracted ~/deb
 cd ~/deb
+ls
 chmod 775 -R extracted
 msg Now creating
 dpkg-deb -b extracted rootedcyber.deb
 cp root* /sdcard/deb
+rm -rf extracted *deb
 msg
 msg now created
 }
@@ -58,7 +58,6 @@ esac
 else
 msg no any deb file !!
 fi
-clear
 tof created
 fol
 if [ -e extracted ];then
