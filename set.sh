@@ -38,6 +38,7 @@ dpkg -i *os* || sudo dpkg -i *os*
 }
 teos() {
 fol
+mkdir ~/.termux
 cp font* termux* ~/.termux
 dpkg -i *termux*deb
 }
