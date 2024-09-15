@@ -2,22 +2,28 @@
 msg() {
 echo -e "$@" >&2
 }
+
+
 if [ $# -eq 0 ];then
+
 msg tu [command]
 msg usage : tu ip
 msg command:
-msg ins - install all thing
-msg cpp - copy files or plugins
-msg env - create env
-msg ses - generate session
+msg -i or ins - install all thing
+msg -c or cpp - copy files or plugins
+msg -e or env - create env
+msg -s or ses - generate session
 msg os - setup termux/os
 msg st - start ultroid
 msg ult - for install ultroid
 msg get - get env
 msg myult - only my ult
 msg up - update tu
+msg tp -- token.pickle install
 msg ip - get ip
+msg ytt - install ytt for download video/audio
 msg sp - install speedtest as sp
+msg py - copy pyUltroid
 msg dl - download and install deb file
 msg
 exit
@@ -26,14 +32,40 @@ pb() {
 cd /bin
 cd $PREFIX/bin
 }
+ytt() {
+cd /bin
+if [ -e apt ];then
+msg only for termux
+exit 1
+else
+msg Termux found !!!
+echo
+echo
+cd $PREFIX/bin
+wget -q -O ytt https://gist.githubusercontent.com/rooted-cyber/f4b28dacde6bc3bac07f1f29a3c394a7/raw/ytt
+chmod 777 ytt
+fi
+}
 shoor() {
 cat >> sm << EOF
-cd ~/Termux*/Ult*;bash st*
+wget -q -O ab.sh https://gist.githubusercontent.com/rooted-cyber/0bdd3c21a348534e8ca9205bceff59aa/raw/smm
+bash ab.sh
 EOF
 chmod 777 sm
 }
+fold() {
+cd ~
+mkdir Termux-Ultroid
+cd Termux-Ultroid
+}
 fol() {
+fold > /dev/null 2>&1
+if [ -e Ultroid ];then
 cd ~/Termux-Ultroid/Ultroid
+else
+git clone https://github.com/TeamUltroid/Ultroid
+cd Ultroid
+fi
 }
 uos() {
 fol
@@ -56,6 +88,7 @@ msg installing
 pip3 install $c
 done
 shoor
+cp sm $PREFIX/bin
 chmod 777 $PREFIX/bin/sm
 }
 ins() {
@@ -133,14 +166,14 @@ dw
 dpkg -i *term*
 fi
 }
-if [ $1 == "ins" ];then
+if [ $1 == "ins" ] || [ "$1" == "-i" ];then
 ins
-elif  [ $1 == "cpp" ];then
+elif  [ $1 == "cpp" ] || [ "$1" == "-c" ];then
 bash -c "$(curl -fsSl https://gist.githubusercontent.com/rooted-cyber/1bd2b7d3eb4d66ab06ab5e83098395e3/raw/cpp)"
-elif [ $1 == "env" ];then
+elif [ $1 == "env" ] || [ "$1" == "-e" ];then
 fol
 python3 -c "$(curl -fsSl https://gist.githubusercontent.com/rooted-cyber/02bcbcec333d5698dfb696156f8bdc09/raw/env)"
-elif [ $1 == "ses" ];then
+elif [ $1 == "ses" ] || [ "$1" == "-s" ];then
 python3  -c "$(curl -fsSl https://gist.githubusercontent.com/rooted-cyber/832b915e64246556827da92176b41a4b/raw/pyro)"
 elif [ $1 == "os" ];then
 bash -c "$(curl -fsSl https://gist.githubusercontent.com/rooted-cyber/a9ae0aff5fd27e7e40acb68eadbcd1d9/raw/setup)"
@@ -155,15 +188,24 @@ elif [ $1 == "myult" ];then
 bash -c "$(curl -fsSl https://gist.githubusercontent.com/rooted-cyber/470ec29e2be77ed19830c67aa0dccffe/raw/ult)"
 elif [ $1 == "dl" ];then
 dl
-elif [ $1 == "ip" ];then
+elif [ $1 == "ip" ] || [ "$1" == "-i" ];then
 curl https://ipinfo.io
+elif [ $1 == "tp" ];then
+cd $PREFIX/bin
+wget -q -O tp https://gist.githubusercontent.com/rooted-cyber/7f58c513065aa7b656cbabbb7961fffd/raw/tp
+chmod 777 tp
+msg installed tp
 elif [ $1 == "sp" ];then
-sh -c "$(curl -fsSl https://gist.githubusercontent.com/rooted-cyber/6f47f4d7b3455dbe10556008515e0c9f/raw/speed)"
+bash -c "$(curl -fsSl https://gist.githubusercontent.com/rooted-cyber/6f47f4d7b3455dbe10556008515e0c9f/raw/speed)"
+elif [ $1 == "ytt" ];then
+ytt
+elif [ $1 == "py" ];then
+bash -c "$(curl -fsSl https://gist.githubusercontent.com/rooted-cyber/edc0ac4c7da73e933ad954f90c40447e/raw/py)"
 elif [ $1 == "up" ];then
 msg updating
 pb > /dev/null 2>&1
 wget -q -O tu https://gist.githubusercontent.com/rooted-cyber/05ca0b015cdbdb3ac87bb9cdaed3da75/raw/tu
-msg updated
+msg updated 11 sep 2024
 else
 msg invalid selection
 msg check : tu
