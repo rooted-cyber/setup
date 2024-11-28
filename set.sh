@@ -1,11 +1,11 @@
 cpp() {
-cp -f tu /bin
-chmod 777 /bin/tu
-sudo rm /bin/tu
-sudo cp tu /bin
-sudo chmod 777 /bin/tu
-cp tu $PREFIX/bin
-chmod 777 $PREFIX/bin/tu
+cp -f .t /bin
+chmod 777 /bin/.t
+sudo rm /bin/.t
+sudo cp .t /bin
+sudo chmod 777 /bin/.t
+cp .t $PREFIX/bin
+chmod 777 $PREFIX/bin/.t
 }
 mtt() {
 cd /
