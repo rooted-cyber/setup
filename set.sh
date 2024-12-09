@@ -26,7 +26,7 @@ wget -O -q .t https://gist.githubusercontent.com/rooted-cyber/05ca0b015cdbdb3ac8
 cpp > /dev/null 2>&1
 }
 fol() {
-cd ~/setup
+cd ~/.abc
 }
 msg() {
 echo -e "\033[1;92m"
