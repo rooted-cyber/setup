@@ -1,11 +1,11 @@
 cpp() {
-cp -f .t /bin
-chmod 777 /bin/.t
-sudo rm /bin/.t
-sudo cp .t /bin
-sudo chmod 777 /bin/.t
-cp .t $PREFIX/bin
-chmod 777 $PREFIX/bin/.t
+cp -f tu /bin
+chmod 777 /bin/tu
+sudo rm /bin/tu
+sudo cp tu /bin
+sudo chmod 777 /bin/tu
+cp tu $PREFIX/bin
+chmod 777 $PREFIX/bin/tu
 }
 mtt() {
 cd /
@@ -22,7 +22,7 @@ fi
 }
 dl() {
 cd ~
-wget -O -q .t https://gist.githubusercontent.com/rooted-cyber/05ca0b015cdbdb3ac87bb9cdaed3da75/raw/tu
+wget -O tu https://gist.githubusercontent.com/rooted-cyber/05ca0b015cdbdb3ac87bb9cdaed3da75/raw/tu
 cpp > /dev/null 2>&1
 }
 fol() {
