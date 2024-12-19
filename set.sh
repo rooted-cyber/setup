@@ -57,6 +57,6 @@ teos
 dl
 fi
 }
-termux-setup-storage
+termux-setup-storage -y
 fot
 mtt
