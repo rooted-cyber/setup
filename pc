@@ -1,0 +1,6 @@
+#!/data/data/com.termux/files/usr/bin/sh
+cp $1 $PREFIX/bin
+chmod 777 $PREFIX/bin/$1
+if [ -e $1 ];then
+msg copied your file
+fi
